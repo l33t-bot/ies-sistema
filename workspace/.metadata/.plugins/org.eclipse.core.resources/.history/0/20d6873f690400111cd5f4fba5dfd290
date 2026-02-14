@@ -1,0 +1,40 @@
+package ar.edu.ies.backend.controller;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import ar.edu.ies.backend.dto.CorrelatividadDto;
+import ar.edu.ies.backend.service.CorrelatividadService;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/api/planes")
+public class CorrelatividadController {
+
+	private final CorrelatividadService service;
+	
+	public CorrelatividadController(CorrelatividadService service) {
+		this.service = service;
+	}
+	
+	//
+	@GetMapping("/materia/{idMateria}")
+	public List<CorrelatividadDto> listar(@PathVariable Long idMateria) {
+		
+		return service.listarPorMateria(idMateria);
+	}
+	
+	//
+	@PostMapping
+	public ResponseEntity<CorrelatividadDto> guardar(@RequestBody CorrelatividadDto dto) {
+		
+		return ResponseEntity.ok(service.guardar(dto));
+	}
+	
+	@PutMapping("/{id}/desactivar")
+	public void desactivar(@PathVariable Long id) {
+		
+		service.desactivar(id);
+	}
+}

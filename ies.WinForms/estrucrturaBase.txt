@@ -1,0 +1,65 @@
+﻿ies-sistema/
+├── .git/
+│
+├── backend/
+│   ├── .mvn/
+│   │   └── wrapper/
+│   │       └── maven-wrapper.properties
+│   ├── mvnw
+│   ├── mvnw.cmd
+│   ├── pom.xml
+│   ├── README.md
+│   │
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/
+│   │   │   │   └── ar/edu/ies/backend/
+│   │   │   │       ├── BackendApplication.java
+│   │   │   │       │
+│   │   │   │       ├── config/
+│   │   │   │       │   ├── PasswordConfig.java
+│   │   │   │       │   └── SecurityConfig.java
+│   │   │   │       │
+│   │   │   │       ├── controller/
+│   │   │   │       │   ├── AuthController.java
+│   │   │   │       │   ├── TestController.java
+│   │   │   │       │   ├── admin/
+│   │   │   │       │   │   └── AdminController.java
+│   │   │   │       │   └── dto/
+│   │   │   │       │       ├── LoginRequest.java
+│   │   │   │       │       ├── LoginResponse.java
+│   │   │   │       │       └── CrearUsuarioRequest.java
+│   │   │   │       │
+│   │   │       ├── model/
+│   │   │   │   ├── Usuario.java
+│   │   │   │   └── Rol.java
+│   │   │   │
+│   │   │   ├── repository/
+│   │   │   │   └── UsuarioRepository.java
+│   │   │   │
+│   │   │   ├── security/
+│   │   │   │   ├── JwtAuthenticationFilter.java
+│   │   │   │   └── JwtService.java
+│   │   │   │
+│   │   │   └── service/
+│   │   │       ├── UsuarioService.java
+│   │   │       └── admin/
+│   │   │           └── AdminService.java
+│   │   │
+│   │   └── resources/
+│   │       └── application.properties
+│   │
+│   └── test/
+│       └── java/
+│           └── ar/edu/ies/backend/
+│               └── BackendApplicationTests.java
+│
+├── admin-winforms/
+│   ├── IesAdmin.sln
+│   └── src/
+│       ├── Forms/
+│       ├── Services/
+│       ├── Models/
+│       └── Utils/
+│
+└── README.md

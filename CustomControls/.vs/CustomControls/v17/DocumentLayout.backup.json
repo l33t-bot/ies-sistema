@@ -1,0 +1,104 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\repo\\CustomControls\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2B0242FE-B45B-4EE1-9061-6DBBCB3526E5}|CustomControls.csproj|C:\\repo\\CustomControls\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2B0242FE-B45B-4EE1-9061-6DBBCB3526E5}|CustomControls.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B0242FE-B45B-4EE1-9061-6DBBCB3526E5}|CustomControls.csproj|c:\\repo\\customcontrols\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B0242FE-B45B-4EE1-9061-6DBBCB3526E5}|CustomControls.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B0242FE-B45B-4EE1-9061-6DBBCB3526E5}|CustomControls.csproj|c:\\repo\\customcontrols\\dropdownmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B0242FE-B45B-4EE1-9061-6DBBCB3526E5}|CustomControls.csproj|solutionrelative:dropdownmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B0242FE-B45B-4EE1-9061-6DBBCB3526E5}|CustomControls.csproj|C:\\repo\\CustomControls\\menurenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B0242FE-B45B-4EE1-9061-6DBBCB3526E5}|CustomControls.csproj|solutionrelative:menurenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B0242FE-B45B-4EE1-9061-6DBBCB3526E5}|CustomControls.csproj|C:\\repo\\CustomControls\\menucolortable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B0242FE-B45B-4EE1-9061-6DBBCB3526E5}|CustomControls.csproj|solutionrelative:menucolortable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\repo\\CustomControls\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\repo\\CustomControls\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAnwBUAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T15:17:49.085Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DropdownMenu.cs",
+              "DocumentMoniker": "C:\\repo\\CustomControls\\DropdownMenu.cs",
+              "RelativeDocumentMoniker": "DropdownMenu.cs",
+              "ToolTip": "C:\\repo\\CustomControls\\DropdownMenu.cs",
+              "RelativeToolTip": "DropdownMenu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-07T23:39:30.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MenuRenderer.cs",
+              "DocumentMoniker": "C:\\repo\\CustomControls\\MenuRenderer.cs",
+              "RelativeDocumentMoniker": "MenuRenderer.cs",
+              "ToolTip": "C:\\repo\\CustomControls\\MenuRenderer.cs",
+              "RelativeToolTip": "MenuRenderer.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwEAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-07T23:33:29.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MenuColorTable.cs",
+              "DocumentMoniker": "C:\\repo\\CustomControls\\MenuColorTable.cs",
+              "RelativeDocumentMoniker": "MenuColorTable.cs",
+              "ToolTip": "C:\\repo\\CustomControls\\MenuColorTable.cs",
+              "RelativeToolTip": "MenuColorTable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-07T23:31:26.267Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\repo\\CustomControls\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\repo\\CustomControls\\Form1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Form1.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-07T23:29:11.659Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+1769010332586	Rename field 'id_carrera'
+1769010353743	Rename local variable 'id_carrera'
+1769011801907	Rename method 'getId_carrera'
+1769011818541	Rename method 'setId_carrera'
+1769012130530	Rename local variable 'carrera'
+1769012718937	Rename type 'Carrera'
+1769038365821	Rename type 'CarreraDto'
+1769293151526	Rename field 'id'
+1769293232544	Rename method 'getId'
+1769293247399	Rename method 'setId'
+1769351414654	Delete element

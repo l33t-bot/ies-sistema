@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;id&apos; in &apos;ar.edu.ies.backend.model.Usuario&apos; to &apos;idUsuario&apos;&#x0D;&#x0A;- Original project: &apos;backend&apos;&#x0D;&#x0A;- Original element: &apos;ar.edu.ies.backend.model.Usuario.id&apos;&#x0D;&#x0A;- Renamed element: &apos;ar.edu.ies.backend.model.Usuario.idUsuario&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;id&apos;" flags="589826" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;ar.edu.ies.backend.model{Usuario.java[Usuario^id" name="idUsuario" references="true" setter="false" stamp="1767198916704" textual="false" version="1.0"/>
+</session>

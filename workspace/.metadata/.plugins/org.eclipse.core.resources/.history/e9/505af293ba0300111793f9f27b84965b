@@ -1,0 +1,42 @@
+package ar.edu.ies.backend.controller;
+
+import java.util.List;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import ar.edu.ies.backend.dto.MateriaDto;
+import ar.edu.ies.backend.service.MateriaService;
+
+public class MateriaController {
+
+	private final MateriaService service;
+	
+	public MateriaController(MateriaService service) {
+		this.service = service;
+	}
+	
+	//Listar Todo
+	@GetMapping
+	public List<MateriaDto> listar() {
+		return service.listarTodas();
+	}
+	
+	// Listar por Plan
+	@GetMapping("/plan/{idPlan}")
+	public List<MateriaDto> listarPorPlan(@PathVariable Long idPlan) {
+		return service.listarPorPlan(idPlan);
+	}
+	
+	// Crear / Editar
+	@PostMapping
+	public ResponseEntity<MateriaDto> guardar(@RequestBody MateriaDto dto) {
+		return ResponseEntity.ok(service.guardar(dto));
+	}
+	
+	// Desactivar
+	@PutMapping("/{id}/desactivar")
+	public void desactivar(@PathVariable Long id) {
+		service.desactivar(id);
+	}
+}

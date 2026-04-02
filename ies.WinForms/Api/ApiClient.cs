@@ -55,5 +55,58 @@ namespace ies.WinForms.Api
 
             return loginResponse;
         }
+
+        // Mejora
+        public static async Task<T> GetAsync<T>(string endpoint)
+        {
+            SetToken();
+
+            var response = await client.GetAsync(endpoint);
+            await ValidarRespuesta(response);
+
+            var json = await response.Content.ReadAsStringAsync();
+
+            return JsonSerializer.Deserialize<T>(json,
+                new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+        }
+
+        public static async Task PostAsync<T>(string endpoint, T data)
+        {
+            SetToken();
+
+            var json = JsonSerializer.Serialize(data);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var response = await client.PostAsync(endpoint, content);
+            await ValidarRespuesta(response);
+        }
+
+        public static async Task PutAsync<T>(string endpoint, T data)
+        {
+            SetToken();
+
+            var json = JsonSerializer.Serialize(data);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var response = await client.PutAsync(endpoint, content);
+            await ValidarRespuesta(response);
+        }
+
+        public static async Task DeleteAsync(string endpoint)
+        {
+            SetToken();
+
+            var response = await client.DeleteAsync(endpoint);
+            await ValidarRespuesta(response);
+        }
+
+        private static async Task ValidarRespuesta(HttpResponseMessage response)
+        {
+            if (!response.IsSuccessStatusCode)
+            {
+                var mensaje = await response.Content.ReadAsStringAsync();
+                throw new Exception($"Error HTTP {(int)response.StatusCode}: {mensaje}");
+            }
+        }
     }
 }

@@ -9,27 +9,51 @@ namespace ies.WinForms.Utils
 {
     public class MessageHelper
     {
-        public static void Info(string msg) =>
+        // Información general
+        public static void Info(string msg)
+        {
             MessageBox.Show(
                 msg,
                 "Información",
-                MessageBoxButtons.OK, MessageBoxIcon.Information
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
             );
+        }
 
-        public static void Error(string msg) =>
+
+        // Operaciones exitosas
+        public static void Success(string msg)
+        {
+            MessageBox.Show(
+                msg,
+                "Éxito",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+            );
+        }
+
+        // Errores
+        public static void Error(string msg, bool mostrarDetalle = false)
+        {
             MessageBox.Show(
                 msg,
                 "Error",
-                MessageBoxButtons.OK, MessageBoxIcon.Error
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Error
             );
-
-        public static bool Confirm(string msg) =>
-            MessageBox.Show(
+        }
+            
+        // Confirmación (Si / No)
+        public static bool Confirm(string msg)
+        {
+            return MessageBox.Show(
                 msg,
-                "Confirmar",
+                "Confirmación",
                 MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question
-            )
-                == DialogResult.Yes;
+                MessageBoxIcon.Question,
+                MessageBoxDefaultButton.Button2 // default "no"
+            ) == DialogResult.Yes;
+        }
+            
     }
 }

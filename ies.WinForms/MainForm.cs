@@ -126,6 +126,7 @@ namespace ies.WinForms
             //
             // Mi código
             //
+            AbrirVista(new MateriasView());
             lblTitulo.Text = "Gestión Materias";
             OcultarSubmenu();
         }
@@ -135,6 +136,7 @@ namespace ies.WinForms
             //
             // Mi código
             //
+            
             lblTitulo.Text = "Gestión Correlatividades";
             OcultarSubmenu();
         }

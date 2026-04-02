@@ -13,6 +13,17 @@ namespace ies.WinForms.Services
     {
         private readonly ApiPlan api = new ApiPlan();
 
+        public async Task<List<PlanDto>> ObtenerTodos()
+        {
+            return await api.GetAll();
+        }
+
+        public async Task<List<PlanDto>> ObtenerActivos()
+        {
+            var list = await api.GetAll();
+            return list.Where(x => x.activo == true).ToList();
+        }
+
         public async Task<List<PlanDto>> ObtenerPorCarrera(long idCarrera)
         {
             return await api.GetByCarrera(idCarrera);

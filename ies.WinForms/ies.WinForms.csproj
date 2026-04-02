@@ -78,17 +78,36 @@
   <ItemGroup>
     <Compile Include="Api\ApiCarrera.cs" />
     <Compile Include="Api\ApiClient.cs" />
+    <Compile Include="Api\ApiMateria.cs" />
     <Compile Include="Api\ApiPlan.cs" />
     <Compile Include="Controls\DropdownMenu.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Controls\MenuColorTable.cs" />
     <Compile Include="Controls\MenuRenderer.cs" />
+    <Compile Include="Core\Correlatividades\CorrelatividadDto.cs" />
+    <Compile Include="Core\Correlatividades\CorrelatividadManager.cs" />
+    <Compile Include="Core\Correlatividades\ICorrelatividadService.cs" />
+    <Compile Include="Core\Materias\IMateriaService.cs" />
+    <Compile Include="Core\Materias\MateriaDto.cs" />
+    <Compile Include="Core\Materias\MateriaManager.cs" />
     <Compile Include="Forms\Views\CarrerasView.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Forms\Views\CarrerasView.Designer.cs">
       <DependentUpon>CarrerasView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Views\CorrelatividadesView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Views\CorrelatividadesView.Designer.cs">
+      <DependentUpon>CorrelatividadesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Views\MateriasView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Views\MateriasView.Designer.cs">
+      <DependentUpon>MateriasView.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Views\PlanesView.cs">
       <SubType>Form</SubType>
@@ -96,6 +115,8 @@
     <Compile Include="Forms\Views\PlanesView.Designer.cs">
       <DependentUpon>PlanesView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\CorrelatividadService.cs" />
+    <Compile Include="Infrastructure\MateriaService.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +137,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CarreraService.cs" />
     <Compile Include="Services\PlanService.cs" />
+    <Compile Include="Utils\ComboHelper.cs" />
     <Compile Include="Utils\MessageHelper.cs" />
     <Compile Include="Utils\Session.cs" />
     <EmbeddedResource Include="Forms\LoginForm.resx">
@@ -123,6 +145,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Views\CarrerasView.resx">
       <DependentUpon>CarrerasView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Views\CorrelatividadesView.resx">
+      <DependentUpon>CorrelatividadesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Views\MateriasView.resx">
+      <DependentUpon>MateriasView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Views\PlanesView.resx">
       <DependentUpon>PlanesView.cs</DependentUpon>
@@ -153,7 +181,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="UI\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="estrucrturaBase.txt" />
   </ItemGroup>

@@ -17,13 +17,12 @@ namespace ies.WinForms.Forms.Views
     public partial class PlanesView : Form
     {
         private readonly PlanService _planService = new PlanService();
-        private long? _idPlanSerleccionado = null;
+        private long? _idPlanSeleccionado = null;
         private long? _idCarreraSeleccionada = null;
 
         public PlanesView()
         {
             InitializeComponent();
-            CargarCarreras();
             this.Load += PlanesView_Load;
         }
 
@@ -32,6 +31,7 @@ namespace ies.WinForms.Forms.Views
             ApiClient.SetToken();
             ConfiguracionGrid();
             await CargarPlanes();
+            await CargarCarreras();
         }
 
         //
@@ -101,7 +101,7 @@ namespace ies.WinForms.Forms.Views
 
         public void LimpiarFormulario()
         {
-            _idPlanSerleccionado = null;
+            _idPlanSeleccionado = null;
 
             txtNombre.Clear();
             nudAnioInicio.Value = nudAnioInicio.Minimum;
@@ -131,7 +131,7 @@ namespace ies.WinForms.Forms.Views
 
             var plan = (PlanDto)dgvPlanes.Rows[e.RowIndex].DataBoundItem;
 
-            _idPlanSerleccionado = plan.idPlan;
+            _idPlanSeleccionado = plan.idPlan;
 
             txtNombre.Text = plan.nombrePlan;
             nudAnioInicio.Value = plan.anioInicio;
@@ -156,7 +156,7 @@ namespace ies.WinForms.Forms.Views
 
             var plan = new PlanDto
             {
-                idPlan = _idPlanSerleccionado,
+                idPlan = _idPlanSeleccionado,
                 idCarrera = (long)cmbCarreras.SelectedValue,
                 nombrePlan = txtNombre.Text.Trim(),
                 anioInicio = (int)nudAnioInicio.Value,
@@ -168,7 +168,7 @@ namespace ies.WinForms.Forms.Views
                 await _planService.Guardar(plan);
 
                 MessageHelper.Info(
-                    _idPlanSerleccionado == null
+                    _idPlanSeleccionado == null
                         ? "Plan agregado correctamente"
                         : "plan actualizado correctamente"
                 );
@@ -184,24 +184,25 @@ namespace ies.WinForms.Forms.Views
 
         private async void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (_idPlanSerleccionado == null)
+            if (_idPlanSeleccionado == null)
             {
                 MessageHelper.Info("Seleecione un plan");
                 return;
-
-                if (!MessageHelper.Confirm("¿Eliminar el plan seleccionado?"))
-                    return;
-
-                try
-                {
-                    await _planService.Eliminar(_idPlanSerleccionado.Value);
-                    MessageHelper.Info("Plan eliminado");
-                }
-                catch
-                {
-                    MessageHelper.Error("No se puede eliminar el plan");
-                }
             }
+
+            if (!MessageHelper.Confirm("¿Eliminar el plan seleccionado?"))
+                return;
+
+            try
+            {
+                await _planService.Eliminar(_idPlanSeleccionado.Value);
+                MessageHelper.Info("Plan eliminado");
+            }
+            catch
+            {
+                MessageHelper.Error("No se puede eliminar el plan");
+            }
+            
         }
     }
 }

@@ -63,3 +63,51 @@
 │       └── Utils/
 │
 └── README.md
+
+domain/
+    Materia.java
+    MateriaRepository.java
+
+application/
+    CrearMateriaUseCase.java
+    ListarMateriasUseCase.java
+    ActualizarMateriaUseCase.java
+
+infrastructure/
+    persistence/
+        MateriaEntity.java
+        SpringMateriaRepository.java
+        MateriaJpaAdapter.java
+        MateriaEntityMapper.java
+
+    controller/
+        MateriaController.java
+
+domain        → Reglas de negocio puras (NO Spring)
+application   → Casos de uso
+infrastructure→ Implementaciones técnicas (JPA, Controller, etc.)
+
+
+📁 AdminWinforms
+│
+├── 📁 Features
+│   │
+│   ├── 📁 Planes
+│   │   ├── PlanDto.cs
+│   │   ├── PlanService.cs
+│   │   ├── PlanManager.cs
+│   │   └── FrmPlanes.cs
+│   │
+│   ├── 📁 Materias
+│   │   ├── MateriaDto.cs
+│   │   ├── MateriaService.cs
+│   │   ├── MateriaManager.cs
+│   │   └── FrmMaterias.cs
+│   │
+│   └── 📁 Carreras
+│       ├── CarreraDto.cs
+│       ├── CarreraService.cs
+│       ├── CarreraManager.cs
+│       └── FrmCarreras.cs
+│
+└── Program.cs

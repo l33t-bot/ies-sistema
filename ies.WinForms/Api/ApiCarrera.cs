@@ -20,6 +20,7 @@ namespace ies.WinForms.Api
             client = ApiClient.Http;
         }
 
+        // Esto despues lo puedo poner como una clase, 
         public async Task<List<CarreraDto>> GetAll()
         {
             var res = await client.GetAsync("/api/carreras");

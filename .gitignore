@@ -12,6 +12,13 @@ obj/
 # Eclipse
 workspace/
 .metadata/
+.settings/
+.project
+.classpath
+
+# IntelliJ
+.idea/
+*.iml
 
 # Logs
 *.log
@@ -20,11 +27,6 @@ workspace/
 *.cache
 *.pdb
 *.exe
-
-# IDEs
-.idea/
-.vscode/
-*.iml
 
 # Sistema
 .DS_Store

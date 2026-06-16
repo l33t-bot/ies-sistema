@@ -1,0 +1,2 @@
+-- Versión inicial de la base de datos del Sistema IES
+-- El contenido definitivo se exportará desde la base de datos actual.

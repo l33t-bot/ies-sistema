@@ -11,3 +11,8 @@ public class BackendApplication {
 	}
 
 }
+
+/*
+ * Orden de creación de las clases: Models(entity), DTOs,
+ * Mapper, repository, Service, Controller, Actualización: SecurityConfig
+ * */

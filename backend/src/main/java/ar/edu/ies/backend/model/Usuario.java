@@ -2,6 +2,7 @@ package ar.edu.ies.backend.model;
 
 import java.time.LocalDateTime;
 
+import ar.edu.ies.backend.domain.usuario.Rol;
 import jakarta.persistence.*;
 
 @Entity
